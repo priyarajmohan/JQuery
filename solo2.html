@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+    function validname(){
+        var name = $("#name").val();
+         var $regexname=/^([a-zA-Z]{3,16})$/;
+        if($(this).val() == '')
+        {
+            $(this).css('border','1px solid red');
+            
+        }
+        else if(!$(this).val().match($regexname) {
+            output = "please enter a valid   name"
+    }
+
+</script>
+</head>
+<body>
+    <form >
+    <label>Name: </label>
+    <input type="text"  id="name"><br>
+    <br>
+ 
+    <label>Email: </label>
+    <input type="text"  id="email"><br>
+    <br>
+ 
+    <label>Password: </label>
+    <input type="text"  id="password"><br>
+    <br>
+
+ 
+    <label>Confirm password </label>
+    <input type="text" id="confirm password"><br>
+    <br>
+
+
+    <input type="submit" name="submit" id="Submit">
+</form>
+</body>

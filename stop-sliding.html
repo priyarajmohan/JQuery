@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>stop-sliding</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style >
+	div{
+		background-color: gray;
+		text-align: center;
+		border: 1px solid red;
+		padding: 10px;
+		color: white;
+		font-size: 20px;
+	}
+	#d1{
+		height: 50px;
+
+	}
+	#d2{
+		height: 100px;
+		display: none;
+	}
+</style>
+<script >
+	$(document).ready(function(){
+		$("#d1").click(function(){
+			$("#d2").slideDown(5000);
+		});
+		$("#stop").click(function(){
+			$("#d2").stop();
+		});
+	});
+</script>	
+</head>
+<body>
+<button id="stop">stopsliding</button>
+<br>
+<br>
+<div id="d1">click to slide down</div>
+<br>
+<br>
+<div id="d2">Helloworld</div>
+</body>
+</html>

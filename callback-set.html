@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>set-content</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script >
+		$(document).ready(function(){
+			$("#btn1").click(function(){
+				$("#p1").text(function(i, origText){
+					return "old text:" + origText + "   .new text: Hello World!(index:" + i + ")";
+				});
+			});
+			$("#btn2").click(function(){
+				$("#p2").html(function(i, orightml){
+					return "old html:" + orightml + "   .new html: Hello <b>World!</b>(index:" + i + ")";
+				});
+			});
+			
+		});
+	</script>
+</head>
+<body>
+<p id="p1">This is <b>p1</b></p>
+<p id="p2">This is<b> p2</b></p>
+
+<br><br>
+<button id="btn1">set old/new text</button>
+<button id="btn2">set  old/new html</button>
+
+</body>
+</html>

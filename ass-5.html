@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>form</title>
+    <style type="text/css">
+        form label {
+  display: inline-block;
+  width: 100px;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+.error {
+  color: red;
+  margin-left: 5px;
+}
+
+label.error {
+  display: inline;
+}
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+  $('#first_form').submit(function(e) {
+    e.preventDefault();
+    var first_name = $('#first_name').val();
+    var last_name = $('#last_name').val();
+    var email = $('#email').val();
+    var password = $('#password').val();
+    var confirm_password = $('#confirm_password').val();
+
+    $(".error").remove();
+
+    /**first_name**/
+    if($('#first_name').val() == '')
+        {
+            $('#first_name').css('border','1px solid red');
+            
+        }
+        else
+        {
+          $('#first_name').css('border','1px solid green');
+        }
+
+    if (first_name.length < 3) {
+      $('#first_name').after('<span class="error">This field is required atleast 3 characters</span>');
+    }
+
+
+    /**last_name**/
+    if($('#last_name').val() == '')
+        {
+            $('#last_name').css('border','1px solid red');
+            
+        }
+        else
+        {
+         $('#last_name').css('border','1px solid green'); 
+        }
+    if (last_name.length < 3) {
+      $('#last_name').after('<span class="error">This field is required atleast 3 characters</span>');
+    }
+
+
+    /**email**/
+    if($('#email').val() == '')
+        {
+            $('#email').css('border','1px solid red');
+            
+        }
+        else
+        {
+          $('#email').css('border','1px solid green');
+        }
+    if (email.length < 1) {
+      $('#email').after('<span class="error">This field is required @ symbol</span>');
+    } else {
+      var regEx = /@/;
+      var validEmail = regEx.test(email);
+      if (!validEmail) {
+        $('#email').after('<span class="error">Enter a valid email</span>');
+      }
+    }
+
+
+    /**password**/
+    if($('#password').val() == '')
+        {
+            $('#password').css('border','1px solid red');
+            
+        }
+        else
+        {
+         $('#password').css('border','1px solid green'); 
+        }
+    if (password.length < 8) {
+      $('#password').after('<span class="error">Password must be at least 8 characters long</span>');
+    }
+
+/**confirm_password**/
+      
+      if($('#confirm_password').val() == '')
+        {
+            $('#confirm_password').css('border','1px solid red');
+            
+        }
+        else
+        {
+         $('#confirm_password').css('border','1px solid green'); 
+        }
+ if (confirm_password<1 )
+{
+$('#confirm_password').after('<span class="error">This field is required</span>');
+      }
+      if (password != confirm_password) {
+        $('#confirm_password').after('<span class="error">password donot match</span>');
+      }
+
+  });
+
+});
+</script>
+</head>
+<body>
+<!-- First Form -->
+<h2>Example 1:</h2>
+<form id="first_form" method="post" action="">
+  <div>
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name"></input>
+  </div>
+  <div>
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="last_name" name="last_name"></input>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"></input>
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"></input>
+  </div>
+  <div>
+    <label for="confirm_password">Confirm password:</label>
+    <input type="password" id="confirm_password" name="confirm_password"></input>
+  </div>
+  <div>
+    <input type="submit" value="Submit" />
+  </div>
+</form>
+</body>
+</html>

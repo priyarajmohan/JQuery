@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sever-after</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script >
+		function afterText(){
+			var txt1 = "<p>i love jquery!</p>";
+			var txt2 = $("<p></P>").text("i love jquery!");
+			var txt3 = document.createElement("p");
+			txt3.innerHTML = ("i love jquery!");
+			$("img").after(txt1, txt2, txt3);
+		}
+	</script>
+</head>
+<body>
+<img src="https://3.bp.blogspot.com/-YcOBKGtGh9c/WILLc7M7UAI/AAAAAAAAADg/bpdmBHiQWd4pOy0gxI1PCckJaDSkNAULwCK4B/w1200-h630-p-k-no-nu/w3-schools-logo.jpg">
+<br>
+<br>
+<button onclick="afterText()">Insert after</button>
+</body>
+</html>

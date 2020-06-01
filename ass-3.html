@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#btn").click(function() {
+                var d = new Date();
+                var day = d.getDate();
+                
+
+                if (day % 2 == 0) {
+                    output = "Even day"
+
+
+                } else {
+                    output1 = "Odd day"
+                }
+                $("#day").html(day);
+                $("#result").html(output1);
+                $("#demo").html(output);
+                
+                
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    
+    <button id="btn">please click and get the day of the month </button>
+    <p id="day"></p>
+    
+
+    <p id="result" style="color: red" ></p>
+    <p id="demo" style="color: green"></p>
+    
+</body>
+
+</html>

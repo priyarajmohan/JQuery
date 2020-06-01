@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>get</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script >
+		$(document).ready(function(){
+			$(document).ready(function(){
+				$("#b1").click(function(){
+					alert("Text:" +$("#test").text());
+				});
+				$("#b2").click(function(){
+					alert("HTML:" +$("#test").html());
+				});
+			});
+
+		});
+	</script>
+</head>
+<body>
+<button id="b1">show text</button>
+<button id="b2">show HTML</button>
+<p id="test">This is <b>bold</b>text</p>
+</body>
+</html>

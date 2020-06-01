@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>prepend</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style type="text/css">
+		
+		.test{
+			color: red;
+			font-size: 20px;
+		}
+		.demo{
+			color: green;
+			font-size: 25px;
+		}
+	</style>
+	<script >
+		$(document).ready(function(){
+			$("#b1").click(function(){
+				$("h1, h2").addClass("test");
+				$("p").addClass("demo");
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	
+<h1>This is paragraph</h1>
+<h2 >This is a paragraph.</h2>
+<p  >This is another paragraph.</p>
+<p >This is another para</p>
+
+	
+
+<br>
+
+
+
+
+<button id="b1">add class to element</button>
+
+</body>
+</html>

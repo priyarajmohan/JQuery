@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>set-content</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script >
+		$(document).ready(function(){
+			$("#btn1").click(function(){
+				$("#p1").text("Hello");
+			});
+			$("#btn2").click(function(){
+				$("#p2").html("<b>Hello</b>");
+			});
+			$("#btn3").click(function(){
+				$("#test3").val("Donald");
+			});
+		});
+	</script>
+</head>
+<body>
+<p id="p1">This is p1</p>
+<p id="p2">This is p2</p>
+Input:<input type="text" id="test3" value="mickey" >
+<br><br>
+<button id="btn1">set text</button>
+<button id="btn2">set html</button>
+<button id="btn3">set value</button>
+</body>
+</html>

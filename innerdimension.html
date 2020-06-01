@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>prepend</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style type="text/css">
+		#div1{
+			 height: 100px;
+  width: 300px;
+  padding: 10px;
+  margin: 3px;
+  border: 1px solid blue;
+  background-color: lightblue;
+
+		}
+	</style>
+	
+	<script >
+		$(document).ready(function(){
+			$("#b1").click(function(){
+				
+		var text = "";
+		text += "innerWidth:"+ $("#div1").innerWidth() + "<br>";
+	    text += "innerHeight:" + $("#div1").innerHeight();
+		$("#div1").html(text);
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	
+
+	<div id="div1"></div>
+
+<br>
+
+
+
+
+<button id="b1">display dimensions of div</button>
+
+</body>
+</html>

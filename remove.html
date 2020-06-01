@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>prepend</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style type="text/css">
+		div{
+			background-color: yellow;
+			border: 1px solid red;
+		}
+	</style>
+	<script >
+		$(document).ready(function(){
+			$("#b1").click(function(){
+				$("div").remove();
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<div>
+<p >This is a paragraph.</p>
+<p >This is another paragraph.</p>
+<ol >
+	<li>Listen item 1</li>
+	<li>Listen item 2</li>
+	<li>Listen item 3</li>
+</ol>
+</div>
+<br>
+
+
+
+
+<button id="b1">Remove div element</button>
+
+</body>
+</html>

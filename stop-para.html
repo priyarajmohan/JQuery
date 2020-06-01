@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>stop-para</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script >
+		$(document).ready(function(){
+			$("#b1").click(function(){
+				$("div").animate({left:'100px'},5000);
+				$("div").animate({fontSize:'3em'},5000);
+			});
+			$("#b2").click(function(){
+				$("div").stop();
+			});
+			$("#b3").click(function(){
+				$("div").stop(true);
+			});
+			$("#b4").click(function(){
+				$("div").stop(true,true);
+			});
+		});
+	</script>
+</head>
+<body>
+<button id="b1">start</button>
+<button id="b2">stop</button>
+<button id="b3">stopall</button>
+<button id="b4">stop but finish</button><br>
+<br>
+<div style="height: 100px;width: 150px;background-color: green;position: absolute;">Hello</div>
+</body>
+</html>

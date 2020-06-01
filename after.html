@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>after/before</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script >
+		$(document).ready(function(){
+			$("#b1").click(function(){
+				$("img").before("before");
+			});
+			$("#b2").click(function(){
+				$("img").after("after");
+			});
+
+		});
+	</script>
+</head>
+<body>
+<img src="https://3.bp.blogspot.com/-YcOBKGtGh9c/WILLc7M7UAI/AAAAAAAAADg/bpdmBHiQWd4pOy0gxI1PCckJaDSkNAULwCK4B/w1200-h630-p-k-no-nu/w3-schools-logo.jpg">
+<br>
+<br>
+<button id="b1">insert before</button>
+<button id="b2">insert after</button>
+</body>
+</html>

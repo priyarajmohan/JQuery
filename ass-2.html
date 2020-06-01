@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>change-attribute</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script >
+		$(document).ready(function(){
+			$("button").click(function(){
+             $("a").attr({
+             	"href":"https://www.facebook.com/",
+             	"title":"facebook"
+             });
+			});
+		});
+	</script>
+</head>
+<body>
+<a  href="http://www.example.com/">example</a>
+<br>
+<br>
+<button>change href</button>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hide-show</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script >
+		$(document).ready(function(){
+			$(".hd").click(function(){
+				$("p").hide();
+				$(".sh").click(function(){
+					$("p").show();
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+<p>hide and show</p>
+<button class="hd">hide</button>
+<button class="sh">show</button>
+</body>
+</html>

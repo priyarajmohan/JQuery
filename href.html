@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hide para</title>
+</head>
+<body>
+	<p> <a href="https://www.w3schools.com/jQuery/tryit.asp?filename=tryjquery_sel_ullifirstchild">w3school</a></p>
+	<p><a href="https://www.w3schools.com/jQuery/tryit.asp?filename=tryjquery_sel_ullifirst">w3school</a></p>
+	<p>click1</p>
+	<button>click mee</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('button').click(function(){
+			$("[href]").hide();
+		});
+	});
+
+</script>
+</body>
+</html>

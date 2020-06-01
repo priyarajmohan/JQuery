@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>attr</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script >
+		$(document).ready(function(){
+			$("button").click(function(){
+				alert("href:" +$("#a1").attr("href"));
+			});
+		});
+	</script>
+</head>
+<body>
+<a id="a1" href="https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_dom_attr_get">W3school</a><br>
+<br>
+<button>show href</button>
+</body>
+</html>
